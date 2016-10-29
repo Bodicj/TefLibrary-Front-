@@ -1,0 +1,45 @@
+@keyframes anim_op {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.search{
+    animation: anim_op 3s;
+    height: 3.9%;
+    width: 34%;
+}
+#srchBar{
+    top: 0px;
+    height: 32px;
+    width: 75%;
+    font-size: 15px;
+    background-color: #dbdbdb;
+    border-width: 0px;
+    font-family: fantasy;
+}
+#srchBtn{
+    top: 0px;
+    height: 34px;
+    padding-top: 2.5px;
+    width: 15%;
+    background-color: #00c4ff;
+    border-width: 0px;
+    font-family: Arial,sans-serif;
+    font-size: 12px;
+    color: white;
+    border-left: 5px;
+    border-color: #00c4ff;
+}
+.container{
+    margin-left: 15%;
+    height: 150px;;
+    width: 70%;
+    background-color: lavenderblush;
+    color: #00c4ff;
+    margin-top: 20px;
+    border-right: 10px;
+    padding-top: 5px;
+}

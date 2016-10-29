@@ -3,10 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>TEF Library</title>
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
         <link href="style.css" rel="stylesheet">
-        <script src="main.js"></script>
-        <script src="ButtonController.js"></script>
     </head>
     <body>
         <div class="wrapper">
@@ -18,8 +15,8 @@
                     <input type="radio" name="search_by" id='author&book' value="author_book">Author & Books
                 </label>
             </div>    
-            <form name="search" action="#" method="get">
-                <input type="text" name="q" placeholder="Search..."     id="srchBar"><button type="submit" id="srchBtn">GO!</button>
+            <form name="search">
+                <input type="text" name="q" placeholder="Search..."id="srchBar"><button type="button" id="srchBtn" onclick="location.href='Search/SearchPage.html'">GO!</button>
             </form>
         </div>
         <footer>

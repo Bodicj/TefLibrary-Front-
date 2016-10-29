@@ -25,7 +25,7 @@ form[name="search"] {
 }
 #srchBtn{
     top: 0px;
-    height: 31px;
+    height: 32px;
     padding-top: 2.5px;
     width: 10%;
     background-color: #00c4ff;
@@ -33,7 +33,7 @@ form[name="search"] {
     font-family: Arial,sans-serif;
     font-size: 12px;
     color: white;
-    border-left; 2px, #00c4ff;
+    border-left: 2px, #00c4ff;
 }
 footer {
     margin-top: 21%;
