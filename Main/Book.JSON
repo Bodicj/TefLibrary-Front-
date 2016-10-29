@@ -1,0 +1,25 @@
+	{
+		"num_of_books": 1,
+		"limit": 10,
+		"offset": 0,
+		"books":[
+			{
+				"name": "TAU",
+				"author": "Rotach",
+				"year": 1958,
+				"tags": "Боль"
+			},
+			{
+				"name": "TAU",
+				"author": "asf",
+				"year": 1958,
+				"tags": "Боль"
+			},
+			{
+				"name": "TAU",
+				"author": "asfg",
+				"year": 1958,
+				"tags": "Боль"
+			}
+		]
+	}

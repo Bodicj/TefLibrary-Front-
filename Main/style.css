@@ -1,0 +1,52 @@
+img{
+    margin-top:5%;
+    margin-left: 44%;
+    height: 200px;
+}
+.radio{
+    font-family: fantasy;
+    color: #00c4ff;
+    margin-left: 43%;
+    font-size: 15px;
+}
+form[name="search"] {
+	margin-left:35%;    
+    height: 3.9%;
+    width: 34%;
+}
+#srchBar{
+    top: 0px;
+    height: 32px;
+    width: 90%;
+    font-size: 15px;
+    background-color: #dbdbdb;
+    border-width: 0px;
+    font-family: fantasy;
+}
+#srchBtn{
+    top: 0px;
+    height: 31px;
+    padding-top: 2.5px;
+    width: 10%;
+    background-color: #00c4ff;
+    border-width: 0px;
+    font-family: Arial,sans-serif;
+    font-size: 12px;
+    color: white;
+    border-left; 2px, #00c4ff;
+}
+footer {
+    margin-top: 21%;
+	background: #00c4ff;
+	color: #dbdbdb;
+	font-size: 11px;
+    border: 5px;
+    border-color: #00c4ff;
+}
+
+#footer {
+	max-width: 960px;
+	margin: auto;
+	padding: 12px 0;
+	height: 90px;
+}

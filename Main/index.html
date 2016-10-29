@@ -1,0 +1,35 @@
+<DOCTYPE html>
+    <html lang="en"  ng-app="myApp">
+    <head>
+        <meta charset="UTF-8">
+        <title>TEF Library</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+        <link href="style.css" rel="stylesheet">
+        <script src="main.js"></script>
+        <script src="ButtonController.js"></script>
+    </head>
+    <body>
+        <div class="wrapper">
+            <img src="%D0%91%D0%B5%D0%B7%D1%8B%D0%BC%D1%8F%D0%BD%D0%BD%D1%8B%D0%B9.jpg">
+            <div class="radio">
+                <label>
+                    <input type="radio" name="search_by" id='author' value="author">Author
+                    <input type="radio" name="search_by" id='book' value="book">Book
+                    <input type="radio" name="search_by" id='author&book' value="author_book">Author & Books
+                </label>
+            </div>    
+            <form name="search" action="#" method="get">
+                <input type="text" name="q" placeholder="Search..."     id="srchBar"><button type="submit" id="srchBtn">GO!</button>
+            </form>
+        </div>
+        <footer>
+	       <div id="footer">
+		      <div id="twitter"></div> 
+		      <div id="sitemap"></div>
+		      <div id="social"></div>
+		      <div id="footer-logo"></div>
+	       </div>
+        </footer>
+    </body>
+    </html>
+    </DOCTYPE>
