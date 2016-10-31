@@ -20,20 +20,35 @@
     font-weight: inherit;
     background-color: #dbdbdb;
     border-width: 0px;
-    font-family: fantasy;
+    font-family: Tahoma, fantasy;
 }
-#srchBtn{
+
+ #srchBtn{
     top: 0px;
     height: 46px;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
     width: 15%;
     background-color: #00c4ff;
     border-width: 0px;
-    font-family: Arial ,sans-serif;
+    font-family: Tahoma, sans-serif;
     font-size: 20px;
+    font-weight: 100;
     color: white;
     border-left: 5px;
     border-color: #00c4ff;
+}
+.win.gecko #srchBtn{
+    top: 0px;
+    height: 46px;
+    padding-bottom: 4px;
+    width: 15%;
+    background-color: #00c4ff;
+    border-width: 0px;
+    font-family: Arial Black ,sans-serif;
+    font-size: 20px;
+    color: white;
+    border-left: 5px;
+    1border-color: #00c4ff;
 }
 .container{
     margin-left: 15%;
@@ -45,7 +60,7 @@
     width: 70%;
     margin-top: 20px;
     padding: 10px;
-    font-family: Arial,sans-serif;
+    font-family: Tahoma,sans-serif;
     font-size: 20px;
     color: #00c4ff;
     height: 150px;

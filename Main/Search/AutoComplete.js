@@ -6,7 +6,7 @@ $(document).ready( function Search () {
         div = document.createElement('div');
         div.className = "Catalog";
         var NumContainer = i + 1;    
-        div.innerHTML = "<strong>Ура!</strong> Вы прочитали это важное сообщение.";
+        div.innerHTML = "Book   ";
         document.getElementById(ContainerName).appendChild(div);
         document.getElementById(ContainerName).id = "Container"+NumContainer.toString(); 
         ContainerName = "Container"+NumContainer.toString();
