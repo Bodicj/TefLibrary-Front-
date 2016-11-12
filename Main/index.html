@@ -4,27 +4,25 @@
         <meta charset="UTF-8">
         <title>TEF Library</title>
         <link href="style.css" rel="stylesheet">
+        <script src="Request.js"></script>
+        <script src="FixCSS.js"></script>
     </head>
     <body>
         <div class="wrapper">
-            <img src="%D0%91%D0%B5%D0%B7%D1%8B%D0%BC%D1%8F%D0%BD%D0%BD%D1%8B%D0%B9.jpg">
+            <img src="%D0%91%D0%B5%D0%B7%D1%8B%D0%BC%D1%8F%D0%BD%D0%BD%D1%8B%D0%B9.jpg"/>
             <div class="radio">
                 <label>
-                    <input type="radio" name="search_by" id='author' value="author">Author
-                    <input type="radio" name="search_by" id='book' value="book">Book
-                    <input type="radio" name="search_by" id='author&book' value="author_book">Author & Books
+                    <input type="radio" name="search_by" id='author' value="author"/>Author
+                    <input type="radio" name="search_by" id='book' value="book"/>Book
+                    <input type="radio" name="search_by" id='author&book' value="author_book" checked/>Author & Book
                 </label>
             </div>    
             <form name="search">
-                <input type="text" name="q" placeholder="Search..."id="srchBar"><button type="button" id="srchBtn" onclick="location.href='Search/SearchPage.html'">GO!</button>
+                <input type="text" name="q" placeholder="Search..."id="srchBar"/><button type="button" id="srchBtn" onclick="GETRequest(), check()">Search</button>
             </form>
         </div>
         <footer>
 	       <div id="footer">
-		      <div id="twitter"></div> 
-		      <div id="sitemap"></div>
-		      <div id="social"></div>
-		      <div id="footer-logo"></div>
 	       </div>
         </footer>
     </body>

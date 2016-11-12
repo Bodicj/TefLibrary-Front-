@@ -4,7 +4,7 @@ img{
     height: 200px;
 }
 .radio{
-    font-family: fantasy;
+    font-family: Tahoma, fantasy;
     color: #00c4ff;
     margin-left: 43%;
     font-size: 15px;
@@ -15,32 +15,46 @@ form[name="search"] {
     width: 34%;
 }
 #srchBar{
-    top: 0px;
-    height: 32px;
-    width: 90%;
+    padding-left: 5px;
+    height: 36px;
+    width: 85%;
     font-size: 15px;
     background-color: #dbdbdb;
     border-width: 0px;
-    font-family: fantasy;
+    font-family: Tahoma, fantasy;
 }
-#srchBtn{
+
+button{
     top: 0px;
-    height: 32px;
-    padding-top: 2.5px;
-    width: 10%;
+    height: 36px;
+    width: 15%;
     background-color: #00c4ff;
     border-width: 0px;
     font-family: Arial,sans-serif;
-    font-size: 12px;
+    font-size: 15px;
     color: white;
     border-left: 2px, #00c4ff;
 }
+ /*#srchBtn{
+    top: 0px;
+    height: 36px;
+    padding-top: 4px;
+    width: 15%;
+    background-color: #00c4ff;
+    border-width: 0px;
+    font-family: Arial,sans-serif;
+    font-size: 15px;
+    color: white;
+    border-left: 2px, #00c4ff;
+}*/
 footer {
+    margin: 0;
+    width: 100%;
     margin-top: 21%;
 	background: #00c4ff;
 	color: #dbdbdb;
 	font-size: 11px;
-    border: 5px;
+    border: 5px, solid;
     border-color: #00c4ff;
 }
 
@@ -48,5 +62,4 @@ footer {
 	max-width: 960px;
 	margin: auto;
 	padding: 12px 0;
-	height: 90px;
 }
