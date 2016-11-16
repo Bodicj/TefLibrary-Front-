@@ -9,12 +9,28 @@ function check()
 }
 
 function GETRequest () {
+    console.log("HAAAHA");
     var req = new XMLHttpRequest();
     var q = document.getElementsByName("q")[0].value;
     var search_by = check();
-    req.open("GET", "http://localhost:5000/api/v1/books?q="+q+"&search_by="+search_by, true);
+    req.open("GET", "http://1eccb168.ngrok.io/api/v1/books?q="+q+"&search_by="+search_by, true);
     req.addEventListener("load", function() {
-    console.log("Done:", req.status);
+        var data = req.response;
+        var i;
+        var div;
+        var ContainerName = "Container";
+        for(i in data.books){
+            var DivOutput =  "<ul>";
+            DivOutput += "<li> <strong>"+ data.books[i].name+"</strong>";
+            DivOutput += "</ul>"
+            div = document.createElement('div');
+            div.className = "Catalog";
+            var NumContainer = i + 1;
+            div.innerHTML =DivOutput;
+            document.getElementById(ContainerName).appendChild(div);
+            document.getElementById(ContainerName).id = "Container"+NumContainer.toString();
+            ContainerName = "Container"+NumContainer.toString();
+            };
     });
     req.send(null);
 }

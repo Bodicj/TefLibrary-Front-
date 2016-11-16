@@ -1,30 +1,29 @@
 <DOCTYPE html>
-    <html lang="en"  ng-app="myApp">
+    <html lang="en">
     <head>
         <meta charset="UTF-8">
         <title>TEF Library</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
         <link href="style.css" rel="stylesheet">
+        <script src="main.js"></script>
+        <script src="AutoComplete.js"></script>
         <script src="Request.js"></script>
         <script src="FixCSS.js"></script>
     </head>
     <body>
         <div class="wrapper">
-            <img src="%D0%91%D0%B5%D0%B7%D1%8B%D0%BC%D1%8F%D0%BD%D0%BD%D1%8B%D0%B9.jpg"/>
-            <div class="radio">
-                <label>
-                    <input type="radio" name="search_by" id='author' value="author"/>Author
-                    <input type="radio" name="search_by" id='book' value="book"/>Book
-                    <input type="radio" name="search_by" id='author&book' value="author_book" checked/>Author & Book
+            <img id="logo" src="%D0%91%D0%B5%D0%B7%D1%8B%D0%BC%D1%8F%D0%BD%D0%BD%D1%8B%D0%B9.jpg"/>
+            <div id="SearchBar">
+                <label id="radioBtn">
+                    <input type="radio" name="search_by" id='author' value="authors"/>Author
+                    <input type="radio" name="search_by" id='book' value="books"/>Book
+                    <input type="radio" name="search_by" id='author&book' value="authors_books" checked/>Author & Book
                 </label>
-            </div>    
-            <form name="search">
                 <input type="text" name="q" placeholder="Search..."id="srchBar"/><button type="button" id="srchBtn" onclick="GETRequest(), check()">Search</button>
-            </form>
+            </div>
+            <div class="RootContainer" id='Container'>
+    </div>
         </div>
-        <footer>
-	       <div id="footer">
-	       </div>
-        </footer>
     </body>
     </html>
     </DOCTYPE>
