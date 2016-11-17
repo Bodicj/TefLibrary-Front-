@@ -9,7 +9,6 @@ function check()
 }
 
 function GETRequest () {
-    console.log("HAAAHA");
     var req = new XMLHttpRequest();
     var q = document.getElementsByName("q")[0].value;
     var search_by = check();
