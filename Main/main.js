@@ -24,6 +24,8 @@ $(document).ready(function(){
             $('#fade').css('display','none');// Ваш скрипт
         }, 499);
     });
+});
+
     /*$('#ClickToDownload').click(function(e){
         var sUrl = "https://drive.google.com/uc?export=download&id=0B3-actNdBR4BMTh4MGk3UTkxYmc"
         console.log("Here");
