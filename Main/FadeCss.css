@@ -1,0 +1,125 @@
+@keyframes anim_op {
+    from {
+        opacity: 0;
+
+    }
+    to {
+        opacity: 0.7;
+    }
+}
+@keyframes anim_po {
+    from {
+        top: -500px;
+    }
+    to {
+        top: 15%;
+    }
+}
+@keyframes anim_width{
+    from{
+       width: 2%
+    }
+    to{
+        width: 30%;
+    }
+}
+@keyframes close_anim{
+    from{
+        opacity: 1;
+    }
+    to
+    {
+        opacity: 0;
+    }
+}
+.black-overlay{
+    animation: anim_op 0.5s;
+	display: none;
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	z-index:1001;
+	-moz-opacity: 0.7;
+	opacity:.70;
+	filter: alpha(opacity=70);
+}
+/* устанавливаем рисунок основы,
+  ** опрделяем размеры и положение на экране  */
+.AddForm {
+    animation: anim_po 0.5;
+    top: 15%;
+	position: fixed;
+    background-color: white;
+	display: none;
+    border-radius: 15px;
+	width: 600px;
+	height: 60%;
+	z-index:1002;
+	margin-left: 30%;
+    transition: top 10s;
+
+}
+#BookAuthor{
+    margin-left: 5.5%;
+}
+#BookName
+{
+    margin-left: 6.5%;
+}
+#BookYear
+{
+    margin-left: 8.5%
+}
+.InputBook{
+    animation: anim_width 0.5s;
+    border-radius: 4px;
+    width: 30%;
+    background-color: #dbdbdb;
+    margin-left: 8%;
+    padding-left: 0.9%;
+}
+#close-btn{
+    margin-top: 7px;
+    margin-left: 5px;
+    background-color: white;
+    border: 0px;
+    font-size: 15pt;
+    border-color: white;
+    color: black;
+}
+#inputForms{
+    padding: 3px;
+    padding-left: 60px;
+
+}
+label{
+    font-family: Roboto, Tahoma, sans-serif;
+}
+h1{
+    /*animation: anim_color 5s;*/
+    margin-left: 28%;
+    font-family: 'Roboto', sans-serif;
+    border-bottom: solid 1px;
+    width: 34%;
+    padding-left: 5%;
+    border-color: #00c4ff;
+}
+#submitBtn{
+    color: white;
+    width: 8em;
+    height: 3em;
+    margin-left: 42%;
+    background-color: #00c4ff;
+    border: 0px;
+    border-color: white;
+    border-radius: 5px;
+}
+.InputBook{
+    height: 7%;
+    border: solid 1px;
+    border-radius: 2px;
+    border-color: #dbdbdb;
+}

@@ -12,7 +12,7 @@ img{
     height: 200px;
 }
 #SearchBar{
-    font-family: Tahoma, fantasy;
+    font-family: 'Roboto', sans-serif;
     color: #00c4ff;
     margin-left: 35%;
     font-size: 15px;
@@ -28,16 +28,16 @@ img{
     font-size: 15px;
     background-color: #dbdbdb;
     border-width: 0px;
-    font-family: Tahoma, fantasy;
+    font-family: 'Roboto', sans-serif;
 }
 
-button{
-    padding-top: 3px;
+#srchBtn{
+    padding-top: 1px;
     height: 36px;
     width: 15%;
     background-color: #00c4ff;
     border-width: 0px;
-    font-family: Arial,sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 15px;
     color: white;
     border-left: 2px, #00c4ff;
@@ -65,11 +65,30 @@ button{
     width: 70%;
     margin-top: 20px;
     padding: 10px;
-    font-family: Tahoma,sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 20px;
     color: #00c4ff;
     height: 150px;
     border: 2px solid #dbdbdb;
     border-radius: 5px;
     animation: anim_op 3s;
+}
+#AddFormButton{
+    position: relative;
+    margin-left: 91%;
+    margin-top: 13%;
+    font-size: 42pt;
+    font-weight: 100;
+    border-width: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-radius: 40pt;
+    height: 80pt;
+    width: 80pt;
+    border-color: none;
+    background-color: #00c4ff;
+    color: white;
+}
+button, button:active, button:focus{
+    outline: none;
 }

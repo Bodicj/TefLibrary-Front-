@@ -1,12 +1,13 @@
-<DOCTYPE html>
+<DOCTYPE html/>
     <html lang="en">
     <head>
         <meta charset="UTF-8">
         <title>TEF Library</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
         <link href="style.css" rel="stylesheet">
+        <link href="FadeCss.css" rel="stylesheet">
         <script src="main.js"></script>
-        <script src="AutoComplete.js"></script>
         <script src="Request.js"></script>
         <script src="FixCSS.js"></script>
     </head>
@@ -22,8 +23,29 @@
                 <input type="text" name="q" placeholder="Search..."id="srchBar"/><button type="button" id="srchBtn" onclick="GETRequest(), check()">Search</button>
             </div>
             <div class="RootContainer" id='Container'>
-    </div>
+            </div>
+            <button id="AddFormButton">+</button>
+            <div id="AddForm" class="AddForm">
+                   <div id="inputForms">
+                        <h1>Add Book</h1>
+                        <form method="post" id="AddForm">
+                            <label for="BookName">Name: </label><input type="text" name="BookName" id="BookName" class="InputBook" required>
+                            <br/>
+                            <br/>
+                            <label for="BookAuthor">Author: </label><input type="text" name="BookAuthor" id="BookAuthor" class="InputBook" required/>
+                            <br/>
+                            <br/>
+                            <label for="BookTags">Tags: </label><input type="text" name="BookTags" id="BookTags" class="InputBook">
+                            <br/>
+                            <br/>
+                            <label for="BookYear">Year: </label><input type="text" name="BookYear" id="BookYear" class="InputBook">
+                            <br/>
+                            <br/>
+                        </form>
+                    </div>
+                <button method="post" type="submit" id="submitBtn"> Submit!</button>
+            </div>
+            <div id="fade" class="black-overlay"></div>
         </div>
     </body>
     </html>
-    </DOCTYPE>
