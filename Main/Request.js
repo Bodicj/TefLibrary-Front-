@@ -16,7 +16,7 @@ function GETRequest () {
     req.addEventListener("load", function() {
         var data = req.response;
         var i;
-        var div;
+        var div, btn, infodiv;
         var ContainerName = "Container";
         for(i in data.books){
             var DivOutput =  "<ul>";
@@ -29,7 +29,9 @@ function GETRequest () {
             document.getElementById(ContainerName).appendChild(div);
             document.getElementById(ContainerName).id = "Container"+NumContainer.toString();
             ContainerName = "Container"+NumContainer.toString();
+            $('#'+ContainerName).append('<button id="Download">Download</button>');
+            $('#'+ContainerName).append('<div id="inform">'+DivOutput+'</div>');
             };
-    });
+        });
     req.send(null);
-}
+};
