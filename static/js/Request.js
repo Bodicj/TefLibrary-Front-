@@ -16,19 +16,14 @@ function GETRequest () {
     req.addEventListener("load", function() {
         var data = req.response;
         var i;
-        var div, btn, infodiv;
+        var div;
         var ContainerName = "Container";
         for(i in data.books){
             var DivOutput =  "<ul>";
-            DivOutput += "<li> <strong>"+ data.books[i].name+"</strong></li>" + "<li> <strong>"+ data.books[i].author+"</strong></li>"+"<li> <strong>"+ data.books[i].year+"</strong></li>";
+            DivOutput += "<li> <strong>"+ data.books[i].name+"</strong></li>" + "<li> <strong>"+ data.books[i].author[0].surname+" "+data.books[i].author[0].initials+"</strong></li>"+"<li> <strong>"+ data.books[i].year+"</strong></li>";
             DivOutput += "</ul>"
-            div = document.createElement('div');
-            div.className = "Catalog";
-            var NumContainer = i + 1;
-            div.innerHTML =DivOutput;
-            document.getElementById(ContainerName).appendChild(div);
-            document.getElementById(ContainerName).id = "Container"+NumContainer.toString();
             ContainerName = "Container"+NumContainer.toString();
+            $('#Container').append('<div id="'+ContainerName+' class="Catalog"></div>');
             $('#'+ContainerName).append('<button id="Download">Download</button>');
             $('#'+ContainerName).append('<div id="inform">'+DivOutput+'</div>');
             };
