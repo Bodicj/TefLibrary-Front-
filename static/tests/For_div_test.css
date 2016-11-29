@@ -1,0 +1,23 @@
+.Main
+{
+    display: inline-block;
+    border: 2px solid black;
+    width: 70%;
+    margin: 3px;
+    padding: 2px;
+    padding-right: -2px;
+}
+Button
+{
+    display: inline-block;
+    max-width: 30%;
+    min-width: 30%;
+    border: 1px solid red;
+}
+#inform
+{
+    display: inline-block;
+    max-width: 70%;
+    min-width: 69%;
+    border: 1px solid green;
+}
