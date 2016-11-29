@@ -12,7 +12,7 @@ function GETRequest () {
     var req = new XMLHttpRequest();
     var q = document.getElementsByName("q")[0].value;
     var search_by = check();
-    req.open("GET", "http://localhost:5000/api/v1/books?q="+q+"&search_by="+search_by, true);
+    req.open("GET", "http://127.0.0.1:5000/api/v1/books?q="+q+"&search_by="+search_by, true);
     req.addEventListener("load", function() {
         var data = req.response;
         var i;
