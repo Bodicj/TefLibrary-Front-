@@ -1,11 +1,17 @@
-$(document).ready(function(){
-    $('#submitBtn').click(function(e){
-       var formData = new FormData();
+<!DOCTYPE html/>
+<html>
+<head>
+    <title>Image Upload Form</title>
+    <script src="//code.jquery.com/jquery-1.9.1.js"></script>
+    <script type="text/javascript">
+        function submitForm() {
+            console.log("submit event");
+           var formData = new FormData();
             formData.append('name', $('#BookName').val())
             formData.append('author', $('#BookAuthor').val())
             formData.append('tags', $('#BookTags').val())
             formData.append('year', $('#BookYear').val())
-            formData.append('file', $('#Upload')[0].files[0]);
+            formData.append('file', $('#file')[0].files[0]);
             console.log(formData);
 
             $.ajax({
@@ -17,16 +23,22 @@ $(document).ready(function(){
                    success : function(data) {
                        console.log(data);
                        alert(data);
-                   },
-                    statusCode: {
-                        404: function() {
-                        alert( "page not found" );
-                        }
-                    }
+                   }
             }).done(function( data ) {
                 console.log("PHP Output:");
                 console.log( data );
             });
             return false;
-        });
-    });
+        }
+    </script>
+</head>
+
+<body>
+    <form method="post" id="fileinfo" name="fileinfo" onsubmit="return submitForm();">
+        <label>Select a file:</label><br>
+        <input type="file" id="file" required />
+        <button type="submit" value="Upload" />
+    </form>
+    <div id="output"></div>
+</body>
+</html>

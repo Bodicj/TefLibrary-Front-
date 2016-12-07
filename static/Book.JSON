@@ -1,0 +1,55 @@
+{
+	"books": [
+		{
+			"author": [
+				{
+					"id": 6106,
+					"initials": "  С. ",
+					"surname": "Столяровский"
+				}
+			],
+			"id": 10441,
+			"is_folder": false,
+			"name": "ArchiCAD 11. Учебный курс (2008).doc",
+			"size": 0,
+			"tags": null,
+			"uri": "/file/10441",
+			"year": "2008"
+		},
+		{
+			"author": [
+				{
+					"id": 6116,
+					"initials": "  А.Л. ",
+					"surname": "Ланцов"
+				}
+			],
+			"id": 10506,
+			"is_folder": false,
+			"name": "Компьютерное проектирование в архитектуре Archicad 11 (2008).doc",
+			"size": 0,
+			"tags": null,
+			"uri": "/file/10506",
+			"year": "2008"
+		},
+		{
+			"author": [
+				{
+					"id": 6117,
+					"initials": "  О.М. ",
+					"surname": "Иванова"
+				}
+			],
+			"id": 10509,
+			"is_folder": false,
+			"name": "Практикум по ArchiCAD. 30 актуальных проектов (2011).doc",
+			"size": 0,
+			"tags": null,
+			"uri": "/file/10509",
+			"year": "2011"
+		}
+	],
+	"limit": 10,
+	"num_of_books": 3,
+	"offset": 0
+}

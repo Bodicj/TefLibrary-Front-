@@ -6,6 +6,14 @@
         opacity: 0.5
     }
 }
+@keyframes anim_width{
+    from{
+       width: 2%
+    }
+    to{
+        width: 70%;
+    }
+}
 img{
     margin-top:5%;
     margin-left: 44%;
@@ -61,8 +69,8 @@ img{
     color: black;
 }
 .Catalog{
-    margin-left: 15%;
-    width: 70%;
+    margin-left: 10%;
+    width: 80%;
     margin-top: 20px;
     padding: 10px;
     font-family: 'Roboto', sans-serif;
@@ -71,12 +79,12 @@ img{
     height: 150px;
     border: 2px solid #dbdbdb;
     border-radius: 5px;
-    animation: anim_op 3s;
+    animation: anim_op 1.5s;
 }
 #AddFormButton{
-    position: relative;
-    margin-left: 91%;
-    margin-top: 13%;
+    position: fixed;
+    left: 91%;
+    top: 81%;
     font-size: 42pt;
     font-weight: 100;
     border-width: 0px;
@@ -91,4 +99,24 @@ img{
 }
 button, button:active, button:focus{
     outline: none;
+}
+#Download{
+    display: inline-block;
+    margin-left: 5%;
+    margin-bottom: 30px;
+    height: 25%;
+    width: 15%;
+    background-color: #00c4ff;
+    border-width: 0px;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 15px;
+    position: relative;
+    color: white;
+    text-transform: uppercase;
+    border-radius: 30px;
+}
+#inform{
+    display: inline-block;
+    margin-left: 15%;
+    position: relative;
 }

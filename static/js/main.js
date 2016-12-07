@@ -3,7 +3,7 @@ $(document).ready(function(){
         $('#logo').remove();
         $('#SearchBar').css('margin-left', '0px');
         $('#SearchBar').css('margin-top', '0px');
-        $('#AddFormButton').css('margin-top','32.9%')
+        //$('#AddFormButton').css('margin-top','32.9%')
     });
     $('#close-btn').click(function(e){
         $('#AddForm').css('display','none');
@@ -21,17 +21,8 @@ $(document).ready(function(){
         $('#fade').css('animation', 'close_anim 0.5s');
         setTimeout(function () {
             $('#AddForm').css('display','none');
-            $('#fade').css('display','none');// Ваш скрипт
+            $('#fade').css('display','none');
         }, 499);
     });
-});
 
-    /*$('#ClickToDownload').click(function(e){
-        var sUrl = "https://drive.google.com/uc?export=download&id=0B3-actNdBR4BMTh4MGk3UTkxYmc"
-        console.log("Here");
-        if (sUrl.indexOf('?') === -1) {
-            sUrl += '?download';
-        }
-        window.open(sUrl, '_self');
-    });
-});*/
+});
