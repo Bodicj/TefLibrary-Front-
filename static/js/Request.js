@@ -14,7 +14,7 @@ function GETRequest () {
     var search_by = check();
     req.open("GET", "http://127.0.0.1:5000/api/v1/books?q="+q+"&search_by="+search_by, true);
     req.addEventListener("load", function() {
-        var data = req.response.toJSON();
+        var data = JSON.parse(req.response);
         var n=2;
         var div;
         var ContainerName = "Container";
