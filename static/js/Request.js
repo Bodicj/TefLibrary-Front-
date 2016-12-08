@@ -14,18 +14,18 @@ function GETRequest () {
     var search_by = check();
     req.open("GET", "http://127.0.0.1:5000/api/v1/books?q="+q+"&search_by="+search_by, true);
     req.addEventListener("load", function() {
-        var data = req.response;
-        var i;
+        var data = req.response.toJSON();
+        var n=2;
         var div;
         var ContainerName = "Container";
-        for(i in data.books){
-            var DivOutput =  "<ul>";
-            DivOutput += "<li> <strong>"+ data.books[i].name+"</strong></li>" + "<li> <strong>"+ data.books[i].author[0].surname+" "+data.books[i].author[0].initials+"</strong></li>"+"<li> <strong>"+ data.books[i].year+"</strong></li>";
-            ContainerName = "Container"+i.toString();
-            $('#Container').append('<div id="'+ContainerName+'" class="Catalog"></div>');
-            $('#'+ContainerName).append('<button id="Download" name="'+data.books[i].uri+'" onclick="Clicker()">Download</button>');
-            $('#'+ContainerName).append('<div id="inform">'+DivOutput+'</div>');
-        };
+        for(var i in data.books){
+                var DivOutput =  "<ul>";
+                DivOutput += "<li> <strong>"+ data.books[i].name+"</strong></li>" + "<li> <strong>"+ data.books[i].author[0].surname+" "+data.books[i].author[0].initials+"</strong></li>"+"<li> <strong>"+ data.books[i].year+"</strong></li>";
+                ContainerName = "Container"+i.toString();
+                $('#Container').append('<div id="'+ContainerName+'" class="Catalog"></div>');
+                $('#'+ContainerName).append('<button id="Download" name="'+data.books[i].uri+'" onclick="Clicker()">Download</button>');
+                $('#'+ContainerName).append('<div id="inform">'+DivOutput+'</div>');
+            };
     });
     req.send(null);
 };
