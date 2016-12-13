@@ -13,13 +13,13 @@
         <script src="js/FixCSS.js"></script>
     </head>
     <body>
-        <div class="wrapper">
+        <div class="wrapper" id="wrapper">
             <img id="logo" src="img/logo.jpg"/>
             <div id="SearchBar">
                 <label id="radioBtn">
-                    <input type="radio" name="search_by" id='author' value="authors"/>Author
-                    <input type="radio" name="search_by" id='book' value="books"/>Book
-                    <input type="radio" name="search_by" id='author&book' value="authors_books" checked/>Author & Book
+                    <input type="radio" name="search_by" id='author' value="authors"/><label for="author">Author</label>
+                    <input type="radio" name="search_by" id='book' value="books"/><label for="book">Book</label>
+                    <input type="radio" name="search_by" id='author&book' value="authors_books" checked/><label for="author&book">Author & Book</label>
                 </label>
                 <input type="text" name="q" placeholder="Search..."id="srchBar"/><button type="button" id="srchBtn" onclick="GETRequest()">Search</button>
             </div>
@@ -29,14 +29,14 @@
                    <div id="inputForms">
                         <h1>Add Book</h1>
                         <form method="post" id="AddForm">
-                            <label for="BookName">Name: </label><input type="text" name="BookName" id="BookName" class="InputBook" required onchange="console.log($('#BookName').val())">
+                            <label for="BookName">Name: </label><input type="text" name="BookName" id="BookName" placeholder="Harry Potter" class="InputBook" required onchange="console.log($('#BookName').val())">
                             <br/>
                             <br/>
                             <label for="BookAuthor">Author: </label><input type="text" name="BookAuthor" id="BookAuthor" class="InputBook"
-                            placeholder="Author" required/>
+                            placeholder="Rolling J.K." required/>
                             <br/>
                             <br/>
-                            <label for="BookTags">Tags: </label><input type="text" name="BookTags" id="BookTags" class="InputBook">
+                            <label for="BookTags">Tags: </label><input type="text" name="BookTags" id="BookTags" class="InputBook" placeholder="Harry, Potter, Potteriana">
                             <br/>
                             <br/>
                             <label for="BookYear">Year: </label><input type="text" name="BookYear" id="BookYear" class="InputBook">
@@ -47,8 +47,30 @@
                         </form>
                     </div>
             </div>
+            <div id="ChangeForm" class="ChangeForm">
+                   <div id="inputForms">
+                        <h1>Change Book</h1>
+                        <form method="post" id="ChangeForm">
+                            <label for="BookName">Name: </label><input type="text" name="BookName" id="BookName" placeholder="Harry Potter" class="InputBook">
+                            <br/>
+                            <br/>
+                            <label for="BookAuthor">Author: </label><input type="text" name="BookAuthor" id="BookAuthor" class="InputBook"
+                            placeholder="Rolling J.K."/>
+                            <br/>
+                            <br/>
+                            <label for="BookTags">Tags: </label><input type="text" name="BookTags" id="BookTags" class="InputBook" placeholder="Harry, Potter, Potteriana">
+                            <br/>
+                            <br/>
+                            <label for="BookYear">Year: </label><input type="text" name="BookYear" id="BookYear" class="InputBook">
+                            <br/>
+                            <br/>
+                            <button method="post" id="submitChangeBtn">Submit!</button>
+                        </form>
+                    </div>
+            </div>
             <div id="fade" class="black-overlay"></div>
         </div>
         <button id="AddFormButton">+</button>
+        <button id="ChangeFormButton">Change</button>
     </body>
     </html>

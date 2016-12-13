@@ -14,13 +14,27 @@ $(document).ready(function(){
         $('#fade').css('animation', 'anim_op 0,5s');
         $('#AddForm').css('display','block');
         $('#fade').css('display','block');
-        $('#AddForm').css('top', '15%')
+        $('#AddForm').css('top', '15%');
+        $('#AddFormButton').css('background-color', 'black');
+    });
+    $('#ChangeFormButton').click(function(e){
+        $('#ChangeForm').css('animation','anim_po 0.5s');
+        $('#fade').css('animation', 'anim_op 0,5s');
+        $('#ChangeForm').css('display','block');
+        $('#fade').css('display','block');
+        $('#ChangeForm').css('top', '15%')
     });
     $('#fade').click(function(e){
         $('#AddForm').css('animation','close_anim 0.5s');
         $('#fade').css('animation', 'close_anim 0.5s');
         setTimeout(function () {
             $('#AddForm').css('display','none');
+            $('#fade').css('display','none');
+        }, 499);
+        $('#ChangeForm').css('animation','close_anim 0.5s');
+        $('#fade').css('animation', 'close_anim 0.5s');
+        setTimeout(function () {
+            $('#ChangeForm').css('display','none');
             $('#fade').css('display','none');
         }, 499);
     });

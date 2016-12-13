@@ -12,7 +12,7 @@ function GETRequest () {
     var req = new XMLHttpRequest();
     var q = document.getElementsByName("q")[0].value;
     var search_by = check();
-    req.open("GET", "http://127.0.0.1:5000/api/v1/books?q="+q+"&search_by="+search_by, true);
+    req.open("GET", "http://127.0.0.1:5000/api/v1/books?q="+q+"&search_by="+search_by+"offset="+offset, true);
     req.addEventListener("load", function() {
         var data = JSON.parse(req.response);
         var n=2;
@@ -23,13 +23,13 @@ function GETRequest () {
                 DivOutput += "<li> <strong>"+ data.books[i].name+"</strong></li>" + "<li> <strong>"+ data.books[i].author[0].surname+" "+data.books[i].author[0].initials+"</strong></li>"+"<li> <strong>"+ data.books[i].year+"</strong></li>";
                 ContainerName = "Container"+i.toString();
                 $('#Container').append('<div id="'+ContainerName+'" class="Catalog"></div>');
-                $('#'+ContainerName).append('<button id="Download" name="'+data.books[i].uri+'" onclick="Clicker()">Download</button>');
+                $('#'+ContainerName).append('<button id="Download" name="'+data.books[i].uri+'" onclick="DownloadBook()">Download</button>');
                 $('#'+ContainerName).append('<div id="inform">'+DivOutput+'</div>');
             };
     });
     req.send(null);
 };
-function Clicker(){
+function DownloadBook(){
         console.log("Event Started");
         console.log(event.target.name);
         var sUrl = event.target.name;
