@@ -78,8 +78,9 @@ $(document).ready(function(){
             $('#Container').remove();
             $('#wrapper').append('<div class="RootContainer" id="Container"></div>');
             for(var i in data.books){
-                    /* =  "<ul id='ListInfo'>";*/
-                    var DivOutput = "<h>"+ data.books[i].name.toString()+"</h>" + "<p>Author(s):"+ data.books[i].author[0].surname+" "+data.books[i].author[0].initials+"</p>"+"<p>Year:"+ data.books[i].year+"</p>";
+                var Author = data.books[i].author[0].surname + data.books[i].author[0].initials;
+                var BookInfo = BookInfoCreator(data.books[i].name, Author, data.books[i].year)
+                var DivOutput += "<h>"+ BookInfo[0]+"</h>" + "<p>Author(s):"+ BookInfo[1]+"</p>"+BookInfo[2];
                     ContainerName = "Container"+i.toString();
                     $('#Container').append('<div id="'+ContainerName+'" class="Catalog"></div>');
                     $('#'+ContainerName).append('<button id="Download" name="'+data.books[i].uri+'">Download</button>');
@@ -118,8 +119,9 @@ $(document).ready(function(){
         $('#wrapper').append('<div class="RootContainer" id="Container"></div>');
         var ContainerName = "Container";
         for(var i in data.books){
-                var DivOutput =  "<ul>";
-                DivOutput += "<li> <strong>"+ data.books[i].name+"</strong></li>" + "<li> <strong>"+ data.books[i].author[0].surname+" "+data.books[i].author[0].initials+"</strong></li>"+"<li> <strong>"+ data.books[i].year+"</strong></li>";
+            var Author = data.books[i].author[0].surname + data.books[i].author[0].initials;
+            var BookInfo = BookInfoCreator(data.books[i].name, Author, data.books[i].year)
+                var DivOutput += "<h>"+ BookInfo[0]+"</h>" + "<p>Author(s):"+ BookInfo[1]+"</p>"+BookInfo[2];
                 ContainerName = "Container"+i.toString();
                 $('#Container').append('<div id="'+ContainerName+'" class="Catalog"></div>');
                 $('#'+ContainerName).append('<button id="Download" name="'+data.books[i].uri+'" >Download</button>');
@@ -152,4 +154,23 @@ $(document).ready(function(){
             }
         }
     }
+    function BookInfoCreator(Name, Author, Year){
+        if(Name === null){
+            Name = 'Unknown';
+        }
+        else{
+        }
+        if(Author === null || Author === undefined){
+            Author = "Unknown"
+        }
+        else{
+        }
+        if(Year === null || Year === undefined){
+            Year = ""
+        }
+        else{
+            Year = "<p>Year:"+ Year+"</p>"
+        }
+        return BookInfo = [Name, Author, Year]
+        }
 });
