@@ -30,14 +30,15 @@ $(document).ready(function(){
         });
     $('#submitChangeBtn').click(function(e){
        var formData = new FormData();
-            formData.append('name', $('#BookName').val());
-            formData.append('author', $('#BookAuthor').val());
-            formData.append('tags', $('#BookTags').val());
-            formData.append('year', $('#BookYear').val());
-            console.log(formData);
+            formData.append('name', $('#BookNameCH').val());
+            formData.append('author', $('#BookAuthorCH').val());
+            formData.append('tags', $('#BookTagsCH').val());
+            formData.append('year', $('#BookYearCH').val());
+            var URL =  'http://127.0.0.1:5000/file/'+$('#Edit')[0].name;
+        console.log(URL);
 
             $.ajax({
-                   url : 'http://127.0.0.1:5000/file',
+                   url : 'http://127.0.0.1:5000/file/',
                    type : 'POST',
                    data : formData,
                    processData: false,  // tell jQuery not to process the data
@@ -48,7 +49,7 @@ $(document).ready(function(){
                    },
                     statusCode: {
                         404: function() {
-                        alert( "page not found" );
+                        alert( "Page not found" );
                         }
                     }
             }).done(function( data ) {

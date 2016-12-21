@@ -4,7 +4,13 @@ $(document).ready(function(){
         $('#SearchBar').css('margin-left', '5%');
         $('#SearchBar').css('margin-top', '0px');
         $('#radioBtn').css('padding', '0px');
-        //$('#AddFormButton').css('margin-top','32.9%')
+    });
+    $('Edit').click(function(e){
+        $('#ChangeForm').css('animation','anim_po 0.5s');
+        $('#fade').css('animation', 'anim_op 0,5s');
+        $('#ChangeForm').css('display','block');
+        $('#fade').css('display','block');
+        $('#ChangeForm').css('top', '15%')
     });
     $('#close-btn').click(function(e){
         $('#AddForm').css('display','none');
@@ -83,6 +89,7 @@ $(document).ready(function(){
                     ContainerName = "Container"+i.toString();
                     $('#Container').append('<div id="'+ContainerName+'" class="Catalog"></div>');
                     $('#'+ContainerName).append('<button id="Download" name="'+data.books[i].uri+'">Download</button>');
+                    $('#'+ContainerName).append('<button id="Edit" name="'+data.books[i].id+'">Edit</button>')
                     $('#'+ContainerName).append('<div id="inform">'+DivOutput+'</div>');
                 };
                 console.log(data.offset);
@@ -123,6 +130,7 @@ $(document).ready(function(){
                 ContainerName = "Container"+i.toString();
                 $('#Container').append('<div id="'+ContainerName+'" class="Catalog"></div>');
                 $('#'+ContainerName).append('<button id="Download" name="'+data.books[i].uri+'" >Download</button>');
+                $('#'+ContainerName).append('<button id="Edit" name="'+data.books[i].id+'" onclick="Editor()">Edit</button>');
                 $('#'+ContainerName).append('<div id="inform">'+DivOutput+'</div>');
             };
         $('#pagination').remove();

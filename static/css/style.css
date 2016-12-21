@@ -97,18 +97,6 @@ ul.pagination li a:hover:not(.active) {background-color: #ddd;}
     color: white;
     border-left: 2px, #00c4ff;
 }
- /*#srchBtn{
-    top: 0px;
-    height: 36px;
-    padding-top: 4px;
-    width: 15%;
-    background-color: #00c4ff;
-    border-width: 0px;
-    font-family: Arial,sans-serif;
-    font-size: 15px;
-    color: white;
-    border-left: 2px, #00c4ff;
-}*/
 .container{
     margin-left: 15%;
     margin-top: 20px;
@@ -116,9 +104,9 @@ ul.pagination li a:hover:not(.active) {background-color: #ddd;}
     color: black;
 }
 .Catalog{
-    margin-left: 10%;
-    width: 80%;
+    width: 93%;
     margin-top: 20px;
+    margin-left: 5%;
     padding: 10px;
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
@@ -167,25 +155,47 @@ input, input:active, input:focus{
 #ListInfo
 {
 position: relative;
-    font-size: 1vw;
+    font-size: 1.5vw;
     padding: 2px;
 }
 #Download{
     display: inline-block;
     margin-left: 5%;
-    margin-bottom: 30px;
+    margin-top: 4.5%;
     height: 25%;
-    width: 15%;
+    width: 8%;
     background-color: #00c4ff;
     border-width: 0px;
     font-family: 'Helvetica', sans-serif;
-    font-size: 1vw;
+    font-size: 0.8vw;
+    font-weight: bold;
     position: relative;
     color: white;
     text-transform: uppercase;
-    border-radius: 30px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+#Edit{
+    display: inline-block;
+    margin-top:4.5%;
+    height: 25%;
+    width: 8%;
+    background-color: #00c4ff;
+    border-width: 0px;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 0.8vw;
+    font-weight: bold;
+    position: relative;
+    color: white;
+    border-left: 1px solid;
+    border-right-color: white;
+    text-transform: uppercase;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
 }
 #inform{
+    float: right;
+    width: 60%;
     display: inline-block;
     margin-left: 15%;
     position: relative;
@@ -196,4 +206,7 @@ position: relative;
      border-radius: 15px;
 	width: 100%;
     min-height: 50%;
+}
+p{
+    color: black;
 }

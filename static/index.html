@@ -9,8 +9,10 @@
         <link href="css/FadeCss.css" rel="stylesheet">
         <script src="js/main.js"></script>
         <script src="js/post_request.js"></script>
-        <script src="tests/For_test.js"></script>
+        <script src="js/AccessRequest.js"></script>
+        <script src="js/Request.js"></script>
         <script src="js/FixCSS.js"></script>
+        <script src="js/jquery-3.1.1.js"></script>
     </head>
     <body>
         <div class="wrapper" id="wrapper">
@@ -21,7 +23,7 @@
                     <input type="radio" name="search_by" id='book' value="books"/><label for="book">Book</label>
                     <input type="radio" name="search_by" id='author&book' value="authors_books" checked/><label for="author&book">Author & Book</label>
                 </label>
-                <input type="text" name="q" placeholder="Search..."id="srchBar"/><button type="button" id="srchBtn" onclick="GETRequest()">Search</button>
+                <input type="text" name="q" placeholder="Search..."id="srchBar"/><button type="button" id="srchBtn" >Search</button>
             </div>
             <div class="RootContainer" id='Container'>
             </div>
@@ -51,17 +53,17 @@
                    <div id="inputForms">
                         <h1>Change Book</h1>
                         <form method="post" id="ChangeForm">
-                            <label for="BookName">Name: </label><input type="text" name="BookName" id="BookName" placeholder="Harry Potter" class="InputBook">
+                            <label for="BookName">Name: </label><input type="text" name="BookName" id="BookNameCH" placeholder="Harry Potter" class="InputBook">
                             <br/>
                             <br/>
-                            <label for="BookAuthor">Author: </label><input type="text" name="BookAuthor" id="BookAuthor" class="InputBook"
+                            <label for="BookAuthor">Author: </label><input type="text" name="BookAuthor" id="BookAuthorCH" class="InputBook"
                             placeholder="Rolling J.K."/>
                             <br/>
                             <br/>
-                            <label for="BookTags">Tags: </label><input type="text" name="BookTags" id="BookTags" class="InputBook" placeholder="Harry, Potter, Potteriana">
+                            <label for="BookTags">Tags: </label><input type="text" name="BookTags" id="BookTagsCH" class="InputBook" placeholder="Harry, Potter, Potteriana">
                             <br/>
                             <br/>
-                            <label for="BookYear">Year: </label><input type="text" name="BookYear" id="BookYear" class="InputBook">
+                            <label for="BookYear">Year: </label><input type="text" name="BookYear" id="BookYearCH" class="InputBook">
                             <br/>
                             <br/>
                             <button method="post" id="submitChangeBtn">Submit!</button>
@@ -71,6 +73,5 @@
             <div id="fade" class="black-overlay"></div>
         </div>
         <button id="AddFormButton">+</button>
-        <button id="ChangeFormButton">Change</button>
     </body>
     </html>

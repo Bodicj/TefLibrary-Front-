@@ -77,20 +77,34 @@
     transition: top 10s;
 }
 #BookAuthor{
-
     position: relative;
     margin-left: 5.5%;
 }
 #BookName
 {
     position: relative;
-    margin-left: 6.5%;
+    margin-left: 6.6%;
 }
 #BookYear
 {
     position: relative;
     margin-left: 8.5%
 }
+#BookAuthorCH{
+    position: relative;
+    margin-left: 5.5%;
+}
+#BookNameCH
+{
+    position: relative;
+    margin-left: 6.5%;
+}
+#BookYearCH
+{
+    position: relative;
+    margin-left: 8.5%
+}
+
 .InputBook{
     position: relative;
     animation: anim_width 0.5s;
